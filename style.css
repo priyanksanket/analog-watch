@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: red;
+    font-size: .8rem;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: url(images/wall-background.webp);
+}
+.container{
+    height: 400px;
+    width: 400px;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(images/clock-background.png);
+    background-size: cover;
+    box-shadow: 10px 10px 40px rgba(0,0,0,.4);
+    /* background: linear-gradient(to right, red blue); */
+    
+
+}
+
+.clock{
+    height: 350px;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    box-shadow: 10px 10px 40px rgba(0,0,0,.4) inset;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+   
+}
+
+.hr, .min, .sec{
+    /* border: 2px solid black; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hr{
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+}
+.min{
+    height: 200px;
+    width: 200px;
+    z-index: 2;
+    
+}
+.sec{
+    height: 250px;
+    width: 250px;
+    z-index: 3;
+}
+
+.hr::before{
+    content: "SANKET";
+    width: 9px;
+    height: 88px;
+    background-color: black;
+    position: absolute;
+    border-radius: 70%;
+    writing-mode:vertical-lr;
+    /* padding-top: 4px; */
+    letter-spacing: .1rem;
+    font-size: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.min::before{
+    content: "";
+    width: 5px;
+    height: 115px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+}
+.sec::before{
+    content: "";
+    width: 3px;
+    height: 145px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    
+}
+.clock::before{
+    content: "S";
+    background-color: black;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2.3px solid red;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
