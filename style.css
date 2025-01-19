@@ -69,7 +69,7 @@ body{
 }
 
 .hr::before{
-    content: "CHANDAN";
+    content: "SANKET";
     width: 9px;
     height: 88px;
     background-color: black;
